@@ -56,7 +56,7 @@ const services = ref([
             :text="item.text"
             variant="outlined"
           >
-            <v-icon class="ma-3" size="x-large">{{ item.icon }}</v-icon>
+            <v-icon class="ma-3" size="60">{{ item.icon }}</v-icon>
           </v-card>
         </v-col>
       </v-row>
