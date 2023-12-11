@@ -7,62 +7,62 @@ const skills = ref([
     title: "HTML",
     color: "primary",
     level: 80,
-    imgSrc: "src/assets/images/skills/html-logo.png",
+    imgSrc: "/src/assets/images/skills/html-logo.png",
   },
   {
     title: "Javascript",
     color: "green",
     level: 80,
-    imgSrc: "src/assets/images/skills/javascript-logo.png",
+    imgSrc: "/src/assets/images/skills/javascript-logo.png",
   },
   {
     title: "CSS",
     color: "brown",
     level: 80,
-    imgSrc: "src/assets/images/skills/css-logo.png",
+    imgSrc: "/src/assets/images/skills/css-logo.png",
   },
   {
     title: "Vue",
     color: "red",
     level: 80,
-    imgSrc: "src/assets/images/skills/vue-logo.png",
+    imgSrc: "/src/assets/images/skills/vue-logo.png",
   },
   {
     title: "SQL",
     color: "yellow",
     level: 80,
-    imgSrc: "src/assets/images/skills/sql-logo.png",
+    imgSrc: "/src/assets/images/skills/sql-logo.png",
   },
   {
     title: "Java",
     color: "indigo",
     level: 70,
-    imgSrc: "src/assets/images/skills/java-logo.png",
+    imgSrc: "/src/assets/images/skills/java-logo.png",
   },
 
   {
     title: "Firebase",
     color: "orange",
     level: 70,
-    imgSrc: "src/assets/images/skills/firebase-logo.png",
+    imgSrc: "/src/assets/images/skills/firebase-logo.png",
   },
   {
     title: "C",
     color: "light-green",
     level: 70,
-    imgSrc: "src/assets/images/skills/c-logo.png",
+    imgSrc: "/src/assets/images/skills/c-logo.png",
   },
   {
     title: "Node JS",
     color: "purple",
     level: 60,
-    imgSrc: "src/assets/images/skills/node-logo.png",
+    imgSrc: "/src/assets/images/skills/node-logo.png",
   },
   {
     title: "MongoDB",
     color: "teal",
     level: 50,
-    imgSrc: "src/assets/images/skills/mongo-logo.png",
+    imgSrc: "/src/assets/images/skills/mongo-logo.png",
   },
 ]);
 
@@ -112,7 +112,11 @@ const expItems = ref([
           <v-col cols="12" sm="4">
             <div>
               <h1 class="text-h6">{{ item.title }} -</h1>
-              <h1 class="text-h6" v-for="company in item.company">
+              <h1
+                class="text-h6"
+                v-for="company in item.company"
+                :key="company"
+              >
                 {{ company }}
               </h1>
             </div>
