@@ -1,19 +1,18 @@
 <template>
   <v-main>
-    <h1 class="text-h3 text-center mt-5">About Me</h1>
-    <v-divider class="mt-5"> </v-divider>
+    <h1 class="text-h4 ma-6 text-orange">About</h1>
     <v-container class="">
       <v-row class="algin-center">
         <v-col>
           <v-img
             cover
-            width="300"
-            class="rounded-circle"
+            width="350"
+            class="rounded-circle img-border"
             src="../assets/images/linked-in-profile.jpg"
           ></v-img>
         </v-col>
         <v-col>
-          <v-sheet width="400" color="grey-darken-4" class="pa-5">
+          <v-sheet color="grey-darken-4" class="pa-5">
             <p><span class="text-orange">Name: </span>Mark Simpson</p>
             <p class="mt-5">
               <span class="text-orange">Phone: </span>506-651-1460
@@ -27,9 +26,14 @@
               Science from the University of New Brunswick (2016 - 2020)
             </p>
             <div class="text-center mt-5">
-              <v-btn rounded variant="outlined" color="orange"
-                >Download Resume</v-btn
+              <a
+                href="/src/assets/files/Resume-MarkSimpson.pdf"
+                download="resume"
               >
+                <v-btn rounded variant="outlined" color="orange"
+                  >Download Resume</v-btn
+                >
+              </a>
             </div>
           </v-sheet>
         </v-col>
@@ -63,3 +67,9 @@
 </template>
 
 <script setup></script>
+
+<style scoped>
+.img-border {
+  border: 8px outset silver;
+}
+</style>

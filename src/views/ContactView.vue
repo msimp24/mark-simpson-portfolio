@@ -64,9 +64,8 @@ const sendEmail = () => {
 
 <template>
   <v-main>
-    <h1 class="text-h3 text-center mt-5">Contact Me</h1>
-    <v-divider class="mt-5"> </v-divider>
-    <v-container>
+    <h1 class="text-h4 ma-6 text-orange">Contact Me</h1>
+    <v-container class="">
       <v-row class="align-center">
         <v-col lg="6" class="">
           <v-row class="flex-column justify-center align-center">
@@ -81,7 +80,7 @@ const sendEmail = () => {
             </v-sheet>
           </v-row>
         </v-col>
-        <v-col class="align-center">
+        <v-col class="align-center mt-6">
           <v-form
             ref="form"
             @submit.prevent="sendEmail()"

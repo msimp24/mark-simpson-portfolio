@@ -15,15 +15,11 @@ const menuItems = ref([
     icon: "mdi-information-outline",
   },
   {
-    title: "Skills",
-    value: "/skills",
+    title: "Work",
+    value: "/work",
     icon: "mdi-laptop",
   },
-  {
-    title: "Portfolio",
-    value: "/portfolio",
-    icon: "mdi-folder",
-  },
+
   {
     title: "Contact",
     value: "/contact",
@@ -55,19 +51,23 @@ const socialIcons = ref([
     <v-app-bar-nav-icon
       variant="text"
       @click.stop="sidebar = !sidebar"
-      class="hidden-md-and-up"
+      class="hidden-md-and-up mr-5"
     ></v-app-bar-nav-icon>
     <v-toolbar-items
       class="hidden-sm-and-down"
       v-for="item in menuItems"
       :key="item"
     >
-      <v-btn :key="`${item.value}-footer-link`" :to="item.value">{{
+      <v-btn size="large" :key="`${item.value}-footer-link`" :to="item.value">{{
         item.title
       }}</v-btn>
     </v-toolbar-items>
-    <div v-for="item in socialIcons" :key="item">
-      <v-btn class="icons-hover" :icon="item.icon" :href="item.link"></v-btn>
+    <div v-for="item in socialIcons" :key="item" class="ml-2">
+      <v-btn
+        class="icons-hover hidden-sm-and-down"
+        :icon="item.icon"
+        :href="item.link"
+      ></v-btn>
     </div>
   </v-app-bar>
 
@@ -77,6 +77,7 @@ const socialIcons = ref([
     location="left"
     width="250"
     temporary
+    class="d-flex flex-column justify-space-between"
   >
     <v-list nav>
       <v-list-item
@@ -88,6 +89,15 @@ const socialIcons = ref([
         :to="link.value"
       >
       </v-list-item>
+    </v-list>
+    <v-list class="d-flex flex-end">
+      <div v-for="item in socialIcons" :key="item" class="ma-3">
+        <v-btn
+          class="icons-hover bg-grey-darken-3"
+          :icon="item.icon"
+          :href="item.link"
+        ></v-btn>
+      </div>
     </v-list>
   </v-navigation-drawer>
 </template>

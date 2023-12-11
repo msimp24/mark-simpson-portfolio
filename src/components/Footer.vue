@@ -12,14 +12,10 @@ const menuItems = ref([
     value: "/about",
     icon: "mdi-information-outline",
   },
+
   {
-    title: "Skills",
-    value: "/skills",
-    icon: "mdi-laptop",
-  },
-  {
-    title: "Portfolio",
-    value: "/portfolio",
+    title: "Work",
+    value: "/Work",
     icon: "mdi-folder",
   },
   {
@@ -48,32 +44,44 @@ const socialIcons = ref([
 
 <template>
   <v-footer class="bg-grey-darken-3">
-    <v-row class="flex-column" no-gutters>
-      <v-toolbar-items class="pa-2" v-for="item in menuItems" :key="item">
-        <v-btn
-          class=""
-          size="small"
-          :key="`${item.value}-footer-link`"
-          :to="item.value"
-          >{{ item.title }}</v-btn
-        >
-      </v-toolbar-items>
-      <div class="flex-row">
-        <v-btn
-          v-for="item in socialIcons"
-          :key="item"
-          :icon="item.icon"
-          :href="item.link"
-          class="bg-grey-darken-3 ma-2"
-          size="x-small"
-        ></v-btn>
-      </div>
-    </v-row>
-    <v-col class="" cols="7">
-      Created By: — <strong>Mark Simpson</strong>
-      <br />
-      <br />
-      Last updated: {{ new Date().getFullYear() }}
-    </v-col>
+    <v-container>
+      <v-row class="">
+        <v-col
+          ><v-toolbar-items class="pa-2" v-for="item in menuItems" :key="item">
+            <v-btn
+              class=""
+              size="small"
+              :key="`${item.value}-footer-link`"
+              :to="item.value"
+              >{{ item.title }}</v-btn
+            >
+          </v-toolbar-items>
+        </v-col>
+        <v-col class="mt-6">
+          Created By: — <strong>Mark Simpson</strong>
+          <br />
+          <br />
+          Last updated: {{ new Date().getFullYear() }}
+        </v-col>
+
+        <v-col>
+          <div>
+            <p class="">Phone: 506-651-1460</p>
+            <p class="mt-2">Email: mark.simpson4@gmail.com</p>
+            <p class="mt-2">Location: Saint John, NB, Canada</p>
+          </div>
+
+          <v-btn
+            v-for="item in socialIcons"
+            :key="item"
+            :icon="item.icon"
+            :href="item.link"
+            class="bg-grey-darken-3 ma-2 mt-5"
+            size="x-small"
+          >
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-footer>
 </template>

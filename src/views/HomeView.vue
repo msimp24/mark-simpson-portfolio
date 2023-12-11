@@ -27,6 +27,7 @@ const services = ref([
         <v-col>
           <h1 class="text-h3 font-weight-bold">Mark Simpson</h1>
           <h1 class="text-orange text-h6 mt-3 font-weight-bold">
+            PRO HOCKEY PLAYER <span class="text-white">|</span><br />
             FREELANCE WEB DEVELOPER
           </h1>
 
@@ -38,14 +39,14 @@ const services = ref([
           <v-img
             class="img-hover"
             src="../assets/images/prof-pic.png"
-            width="550"
+            width="580"
           />
         </v-col>
       </v-row>
     </v-container>
 
     <v-container class="mt-6">
-      <h1 class="text-h3 text-center ma-5">My Services</h1>
+      <h1 class="text-h3 text-center ma-6 text-orange">My Services</h1>
       <v-row class="justify-center">
         <v-col md="4" cols="8" v-for="item in services" :key="item">
           <v-card
